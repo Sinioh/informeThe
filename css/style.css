@@ -1,0 +1,6 @@
+header #cabecalho img {
+    float: none;
+    margin: 0px 5px 5px  10px;
+    width: 95%;
+    border: 3px solid #9c9b9b;
+}
