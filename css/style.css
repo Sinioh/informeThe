@@ -4,3 +4,7 @@ header #cabecalho img {
     width: 95%;
     border: 3px solid #9c9b9b;
 }
+
+.card {
+    display: inline-block;
+}
