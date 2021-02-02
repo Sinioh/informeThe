@@ -1,10 +1,126 @@
-header #cabecalho img {
-    float: none;
-    margin: 0px 5px 5px  10px;
-    width: 95%;
-    border: 3px solid #9c9b9b;
+@charset "UTF-8";
+
+body {
+    background-color: #dadada;
+}
+p {
+    text-align:justify;
+}
+#div_principal {
+    width: 900px;
+    margin: 0 auto 0 auto;
+}
+#artigos{
+    float: left;
+    width: 500px;
+    padding-right: 10px;
+
 }
 
-.card {
-    display: inline-block;
+#artigos img{
+    float: none;
+    margin: 0px 0px 0px  0px;
+    width: 85%;
+    border: 3px solid #7e7e80;
+}
+
+#Lateral{
+    width: 300px;
+    float:right;
+    padding-left: 10px;
+    
+ }
+    
+#artigos1{
+    float: left;
+    width: 500px;
+    padding-right: 10px;
+    
+}
+
+#artigos1 img{
+    float: none;
+    margin: 0px 0px 0px  0px;
+    width: 85%;
+    border: 3px solid #7e7e80;
+}
+
+#artigos2{
+    float: left;
+    width: 500px;
+    padding-right: 10px;
+    
+}
+
+#artigos2 img{
+    float: none;
+    margin: 0px 0px 0px  0px;
+    width: 85%;
+    border: 3px solid #7e7e80;
+}
+
+#artigos3{
+    float: left;
+    width: 500px;
+    padding-right: 10px;
+   
+}
+
+#artigos3 img{
+    float: none;
+    margin: 0px 0px 0px  0px;
+    width: 85%;
+    border: 3px solid #7e7e80;
+}
+
+#Lateral{
+    width: 300px;
+    float:right;
+    padding-left: 10px;
+    
+ }
+#rodape{
+    clear: both;
+    border-top: 1px solid #000000
+    padding - top 10px;
+    text-align: center;
+}
+#cabecalho {
+border-bottom: 1px solid #d9e7d5;
+border-radius: 15px;
+margin-top: -8px;
+padding: 1px 0 0 15px;
+padding-bottom: 15px;
+box-shadow: 10px 10px 5px  #7e7e80;
+background-size: 100% 100%;
+background: rgb(1, 28, 104);
+background: -moz-radial-gradient(center, ellipse cover) rgb(216, 208, 210);
+background: -webkit-gradient(radial, center, center, 0px, center center);
+background: -webkit-radial-gradient( center, ellipse cover) rgb(216, 208, 210);
+background: -o-radial-gradient(center, ellipse cover) rgb(216, 208, 210);
+background: -ms-radical-gradient(center, ellipse cover) rgb(216, 208, 210);
+background: radial-gradient(ellipse att center)  rgb(216, 208, 210);
+filter: progid:DXIMAGETransform.Microsolf.gradient(startColorstr=rgb(216, 208, 210));
+}
+#cabecalho h1{
+    margin-bottom: 40;
+    text-shadow: 5px 5px 5px #69ff05;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 500%;
+    color: rgb(150, 147, 150); 
+    
+}
+
+#cabecalho h2{
+    font-size: 150%;
+    text-shadow: 2px 2px 2px 2px #69ff05;
+    color: #7e7e80;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+#cabecalho img {
+    float: none;
+    margin: 0px 0px 0px  0px;
+    width: 95%;
+    border: 3px solid #7e7e80;
 }
