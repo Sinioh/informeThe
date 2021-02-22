@@ -1,7 +1,12 @@
 @charset "UTF-8";
 
+
 body {
-    background-color: #dadada;
+    background: rgb(66,159,233);
+    background: -moz-radial-gradient(circle, rgba(66,159,233,1) 4%, rgba(63,221,251,1) 54%);
+    background: -webkit-radial-gradient(circle, rgba(66,159,233,1) 4%, rgba(63,221,251,1) 54%);
+    background: radial-gradient(circle, rgba(66,159,233,1) 4%, rgba(63,221,251,1) 54%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#429fe9",endColorstr="#3fddfb",GradientType=1);
 }
 p {
     text-align:justify;
