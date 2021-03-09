@@ -15,6 +15,9 @@ p {
     width: 900px;
     margin: 0 auto 0 auto;
 }
+#div_principal #navbar_imagem {
+    width: 80px;
+}
 #artigos{
     float: left;
     width: 500px;
