@@ -13,11 +13,12 @@ p {
 }
 #div_principal {
     width: 900px;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 0 auto;    
 }
 #div_principal #navbar_imagem {
     width: 80px;
 }
+
 #artigos{
     float: left;
     width: 500px;
@@ -131,4 +132,10 @@ p {
     margin: 0px 0px 0px  0px;
     width: 95%;
     border: 3px solid #7e7e80;
+}
+.card {
+    margin: 0px;
+    padding: 0px;
+    width: 15rem;
+    padding-top: 12px;
 }
