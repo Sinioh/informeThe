@@ -12,6 +12,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="img/iconefavorito.ico">
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+    h3 {
+        margin-bottom: 40;
+        text-shadow: 5px 5px 5px #69ff05;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 500%;
+        color: rgb(57, 55, 170);
+    }
+    html {
+    border-top: 0px solid #fff;
+    background: #f9f9f9;
+
+    }
+
+    #slider {
+        position: relative;
+        overflow: hidden;
+        margin: 20px auto 0 auto;
+        border-radius: 4px;
+        float: right;
+
+    }
+
+    #slider ul {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        height: 200px;
+        list-style: none;
+    }
+
+    #slider ul li {
+        position: relative;
+        display: block;
+        float: left;
+        margin: 0;
+        padding: 0;
+        width: 900px;
+        height: 500px;
+        background: rgb(9, 80, 233);
+        text-align: center;
+        line-height: 300px;
+    }
+
+    a.control_prev,
+    a.control_next {
+        position: absolute;
+        top: 40%;
+        z-index: 999;
+        display: block;
+        padding: 4% 3%;
+        width: auto;
+        height: auto;
+        background: #2a2a2a;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 18px;
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    a.control_prev:hover,
+    a.control_next:hover {
+        opacity: 1;
+        -webkit-transition: all 0.2s ease;
+    }
+
+    a.control_prev {
+        border-radius: 0 2px 2px 0;
+    }
+
+    a.control_next {
+        right: 0;
+        border-radius: 2px 0 0 2px;
+    }
+
+    .slider_option {
+        position: relative;
+        margin: 10px auto;
+        width: 160px;
+        font-size: 18px;
+    }
+</style>
 
 <body>
 
@@ -19,7 +104,8 @@
         <nav class="navbar navbar-light" style="background-color: #011c68;">
             <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #9bb1ee;">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html"><img width="80px" src="img/WhatsApp Image 2021-03-09 at 16.47.33.jpeg" alt="InformeTHE-LOGO"></a>
+                    <a class="navbar-brand" href="index.html"><img width="80px"
+                            src="img/WhatsApp Image 2021-03-09 at 16.47.33.jpeg" alt="InformeTHE-LOGO"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -52,74 +138,111 @@
             </nav>-->
             <div id="cont_db4502f4e0c4cdfb73c7d102a2c2577c">
                 <script type="text/javascript" async
-                        src="https://www.tempo.com/wid_loader/db4502f4e0c4cdfb73c7d102a2c2577c"></script>
-                    </div>
-                </script>
-            </header>
-            <br>
-            <div class="container">
-            <section id="Lateral">
-                <fieldset>
-                    <h2>INFORMAÇÕES UTÉIS</h2>
+                    src="https://www.tempo.com/wid_loader/db4502f4e0c4cdfb73c7d102a2c2577c"></script>
+            </div>
+            </script>
+        </header>
+        <h3 align="center">Informe Teresina</h3>
+        <h1>Pontos Turisticos</h1>
+        
+        <div id="slider">
+            <a href="#" class="control_next">→</a>
+            <a href="#" class="control_prev">←</a>
+            <ul>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="img/PonteEstaida.jpg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="img/EncontroDosRios.jpg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img width="99%" src="img/Poloceramico.jpg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="img/Museu.jpg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img width="99%" src="img/CentralDeArtesanato.jpg" />
+                    </a>
+                </li>
 
-                    <h3>TELEFONES DE EMERGÊNCIA</h3>
-                    <p>Corpo de Bombeiros - 193</p>
-                    <p>Policia Militar - 190</p>
-                    <P>Polícia Rodoviária Federal - 191</P>
-                    <p>Polícia Rodoviária Estadual - 198</p>
-                    <p>Defesa Civíl - 199</p>
-                    <p>Serviço de Atendimento Móvel de Urgência (SAMU) - 192</p>
+            </ul>
+        </div>
+        <script>
+            $(function () {
+                $('#checkbox').change(function () {
+                    setInterval(function () {
+                        moveRight();
+                    }, 3000);
+                });
+                var slideCount = $('#slider ul li').length;
+                var slideWidth = $('#slider ul li').width();
+                var slideHeight = $('#slider ul li').height();
+                var sliderUlWidth = slideCount * slideWidth;
+                $('#slider').css({
+                    width: slideWidth,
+                    height: slideHeight
+                });
+                $('#slider ul').css({
+                    width: sliderUlWidth,
+                    marginLeft: -slideWidth
+                });
+                $('#slider ul li:last-child').prependTo('#slider ul');
+                function moveLeft() {
+                    $('#slider ul').animate({
+                        left: +slideWidth
+                    }, 200, function () {
+                        $('#slider ul li:last-child').prependTo('#slider ul');
+                        $('#slider ul').css('left', '');
+                    });
+                };
+                function moveRight() {
+                    $('#slider ul').animate({
+                        left: -slideWidth
+                    }, 200, function () {
+                        $('#slider ul li:first-child').appendTo('#slider ul');
+                        $('#slider ul').css('left', '');
+                    });
+                };
+                $('a.control_prev').click(function () {
+                    moveLeft();
+                });
+                $('a.control_next').click(function () {
+                    moveRight();
+                });
+            });
+        </script>
 
-                    <h3>TELEFONES DE SERVIÇOS PÚBLICOS</h3>
-                    <P>Secretaria de Turismo (SEMDEC) - (86) 3215-7470 / 3215-7472</P>
-                    <p>Rodoviária de Teresina - (86) 3218-6146</p>
-                    <P>Aeroporto de Teresina - (86) 3133-6270</P>
-            </section>
-            </fieldset>
+        <div class="container">
+            <h2>INFORMAÇÕES UTÉIS</h2>
 
-            <fieldset>
-                <section id="artigos">
-                    <h2>PONTE ESTAIADA</h2>
-                    <p>
-                        <img src="img/PonteEstaida.jpg" alt="Ponte PonteEstaida">
-                    </P>
+            <h5>TELEFONES DE EMERGÊNCIA</h5>
+            <p>Corpo de Bombeiros - 193</p>
+            <p>Policia Militar - 190</p>
+            <P>Polícia Rodoviária Federal - 191</P>
+            <p>Polícia Rodoviária Estadual - 198</p>
+            <p>Defesa Civíl - 199</p>
+            <p>Serviço de Atendimento Móvel de Urgência (SAMU) - 192</p>
 
-                </section>
-            </fieldset>
+            <h5>TELEFONES DE SERVIÇOS PÚBLICOS</h5>
+            <P>Secretaria de Turismo (SEMDEC) - (86) 3215-7470 / 3215-7472</P>
+            <p>Rodoviária de Teresina - (86) 3218-6146</p>
+            <P>Aeroporto de Teresina - (86) 3133-6270</P>
 
-            <fieldset>
-                <section id="artigos1">
-                    <h2>ENCONTRO DOS RIOS</h2>
-                    <p>
-                        <img src="img/EncontroDosRios.jpg" alt="encontrodosrios">
-                    <P>
-
-                </section>
-            </fieldset>
-
-            <fieldset>
-                <section id="artigos2">
-                    <h2>POLO CERAMICO</h2>
-                    <p>
-                        <img src="img/Poloceramico.jpg" alt="POLO CERAMICO">
-                    </p>
-
-                </section>
-            </fieldset>
-
-            <fieldset>
-                <section id="artigos3">
-                    <h2>MUSEU</h2>
-                    <p>
-                        <img src="img/Museu.jpg" alt="MUSEU">
-                    </p>
-
-                </section>
-            </fieldset>
 
             <footer id="rodape">
                 <strong>Senac - Sistema</strong><br />
-                <a href="https://www.facebook.com/senacpiaui">Facebook</a> | <a href="https://www.instagram.com/senacpiaui/">Instagram</a>
+                <a href="https://www.facebook.com/senacpiaui">Facebook</a> | <a
+                    href="https://www.instagram.com/senacpiaui/">Instagram</a>
             </footer>
         </div>
     </div>

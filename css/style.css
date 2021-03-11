@@ -139,3 +139,10 @@ p {
     width: 15rem;
     padding-top: 12px;
 }
+h3 {
+    margin-bottom: 40;
+    text-shadow: 5px 5px 5px #69ff05;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 500%;
+    color: rgb(57, 55, 170);
+}
